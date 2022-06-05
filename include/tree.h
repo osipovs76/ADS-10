@@ -33,14 +33,14 @@ class Tree {
     std::vector<std::string> sw;
     void change(Node* root, std::string symb  = "") {
         if (!root->leaves.size()) {
-            symb  += root->value;
-            sw.push_back(symb );
+            symb += root->value;
+            sw.push_back(symb);
             return;
         }
         if (root->value != '*')
             symb  += root->value;
         for (size_t i = 0; i < root->leaves.size(); i++)
-            change(root->leaves[i], symb );
+            change(root->leaves[i], symb);
     }
 
  public:
